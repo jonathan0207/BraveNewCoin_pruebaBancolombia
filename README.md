@@ -17,6 +17,7 @@ Para ejecutar la aplicación localmente se requieren las siguientes instalacione
 sistema:
 
 - [NodeJS](https://nodejs.org/es/)
+- [Angular](https://angular.io/)
 
 ## Pasos para su ejecución
 
