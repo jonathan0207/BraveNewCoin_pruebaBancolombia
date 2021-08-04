@@ -88,29 +88,9 @@ describe('Coins Controller test OK', () => {
         spy.mockRestore()
     })
 
-})
 
-describe('Coins Controller test ERROR', () => {
-
-    beforeEach(() => {
-        mReq = mockRequest
-        mRes = mockResponse()
-    })
-
-    test('Should return response error when getAllCoins is called', async () => {
-
-
-        const spy = jest.spyOn(coinService, 'getAllCoins')
-            .mockImplementationOnce(
-                () => Promise.reject({
-                    data: 'error',
-                    status: 500
-                }))
-
-        await getAllCoins(mReq, mRes)
-        expect(mRes.json).toHaveBeenCalledWith({ message: 'Error consultando la lista de criptomonedas' })
-        spy.mockRestore()
-    })
 
 
 })
+
+

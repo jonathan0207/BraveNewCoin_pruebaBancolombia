@@ -6,7 +6,7 @@ const config = {
         database: process.env.database || 'bPNsb88hVw',
         dbusername: process.env.dbusername || 'bPNsb88hVw',
         password: process.env.password || '3C4ny7i6Gz',
-        host: process.env.host || 'remotemysql.com',
+        host: process.env.host || 'remotemysql.com', 
         dialect: process.env.dialect || 'mysql'
     },
     cryptocoinUrl: process.env.CRYPTOCOIN_URL || 'https://api.coingecko.com/api/v3',
