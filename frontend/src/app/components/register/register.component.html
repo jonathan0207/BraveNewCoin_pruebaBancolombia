@@ -1,0 +1,102 @@
+<div class="wrapper">
+
+    <div class="main">
+        <div class="wrapper">
+            <div class="page-header" style="background-image: url('./assets/img/login-image.jpg');">
+                <div class="filter"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                            <div class="card card-register">
+                                <h3 class="title">Welcome</h3>
+
+                                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
+                                    <label>Nombre</label>
+                                    <div class="input-group form-group-no-border"
+                                        [ngClass]="{'input-group-focus':focus===true}">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="nc-icon nc-single-02"></i>
+                                            </span>
+                                        </div>
+                                        <input formControlName="name" type="text" class="form-control"
+                                            placeholder="Nombre" (focus)="focus=true" (blur)="focus=false">
+                                        <div *ngIf="registerForm.get('name').invalid && !registerForm.get('name').pristine"
+                                            style="color: black;" class="form-control-feedback">Este Campo es
+                                            Obligatorio</div>
+
+
+                                    </div>
+                                    <label>Apellido</label>
+                                    <div class="input-group form-group-no-border"
+                                        [ngClass]="{'input-group-focus':focus===true}">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="nc-icon nc-single-02"></i>
+                                            </span>
+                                        </div>
+                                        <input formControlName="lastname" type="text" class="form-control"
+                                            placeholder="Apellido" (focus)="focus=true" (blur)="focus=false">
+                                        <div *ngIf="registerForm.get('lastname').invalid && !registerForm.get('lastname').pristine"
+                                            style="color: black;" class="form-control-feedback">Este Campo es
+                                            Obligatorio</div>
+                                    </div>
+                                    <label>Usuario</label>
+                                    <div class="input-group form-group-no-border"
+                                        [ngClass]="{'input-group-focus':focus===true}">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="nc-icon nc-circle-10"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" formControlName="username" class="form-control"
+                                            placeholder="Usuario" (focus)="focus=true" (blur)="focus=false">
+                                        <div *ngIf="registerForm.get('username').invalid && !registerForm.get('username').pristine"
+                                            style="color: black;" class="form-control-feedback">Este Campo es
+                                            Obligatorio</div>
+                                    </div>
+                                    <label>Moneda Preferida</label>
+                                    <div>
+                                        
+                                        <select formControlName="preferredCurrency" id="preferredCurrency" value="Selecciona una opción">
+                                            <option [value]="item.name" *ngFor="let item of list">{{item.name}}</option>
+                                        </select>
+
+                                    </div>
+
+                                    <label>Contraseña</label>
+                                    <div class="input-group form-group-no-border"
+                                        [ngClass]="{'input-group-focus':focus1===true}">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="nc-icon nc-key-25"></i>
+                                            </span>
+                                        </div>
+                                        <input formControlName="password" type="password" class="form-control"
+                                            placeholder="Contraseña" (focus)="focus1=true" (blur)="focus1=false">
+                                        <div *ngIf="registerForm.get('password').invalid && !registerForm.get('password').pristine && !registerForm.get('password').errors?.maxlength"
+                                            style="color: black;" class="form-control-feedback">Este Campo es
+                                            Obligatorio</div>
+
+                                        <div *ngIf="registerForm.get('password').errors?.maxlength && !registerForm.get('password').pristine"
+                                            style="color: black;" class="form-control-feedback">La contraseña debe tener
+                                            máximo
+                                            {{ registerForm.get('password').errors?.maxlength?.requiredLength }}
+                                            caracteres
+                                        </div>
+                                    </div>
+                                    <button [disabled]="registerForm.invalid" type="submit"
+                                        class="btn btn-danger btn-block btn-round mt-5">Registrar</button>
+                                </form>
+
+                                <div class="forgot">
+                                    <a [routerLink]="['/login']" class="btn btn-link btn-danger">Iniciar Sesión</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

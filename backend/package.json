@@ -1,0 +1,35 @@
+{
+  "name": "bravenewcoin-pruebabancolombia",
+  "version": "1.0.0",
+  "description": "prueba bancolombia",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --clearCache && jest --coverage --reporters=default",
+    "start": "node index.js",
+    "start-dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathan0207/braveNewCoin-pruebaBancolombia.git"
+  },
+  "author": "jonathan florez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathan0207/braveNewCoin-pruebaBancolombia/issues"
+  },
+  "homepage": "https://github.com/jonathan0207/braveNewCoin-pruebaBancolombia#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.5"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12"
+  }
+}

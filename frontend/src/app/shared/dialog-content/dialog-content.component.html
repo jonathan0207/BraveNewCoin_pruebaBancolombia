@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Valor</label>
+        <input type="number" class="form-control" min="1" formControlName="value" id="value" placeholder="Ingrese valor a convertir">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Criptomoneda</label>
+        <select class="form-control" formControlName="criptomoneda1" id="criptomoneda1" value="Selecciona una opción">
+            <option value="3900">Peso</option>
+            <option [value]="item.current_price" *ngFor="let item of list">{{item.name}}</option>
+        </select>
+    </div>
+    <div class="form-group center">
+        <button type="button" (click)="reverseValue()" class="btn btn-outline-primary btn-sm"><i class="nc-icon nc-refresh-02"></i></button>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Criptomoneda</label>
+        <select class="form-control" formControlName="criptomoneda2" id="criptomoneda2" value="Selecciona una opción">
+            <option value="3900">Peso</option>
+            <option [value]="item.current_price" *ngFor="let item of list">{{item.name}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Resultado</label>
+        <input type="number" class="form-control" formControlName="result" id="result">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info">convertir</button>
+    </div>
+</form>

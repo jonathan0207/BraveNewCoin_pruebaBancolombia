@@ -1,0 +1,34 @@
+<div class="section section-buttons">
+    <div class="container">
+        <div class="row">
+            <div class="text-right" style="width: 100%; margin-top: 50px;">
+                <button (click)="onClick()" type="button" class="btn btn-primary">New <i
+                        class="nc-icon nc-simple-add"></i></button>
+                <button mat-button (click)="openDialog()">Convert</button>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="card" style="width: 100%; margin-top: 50px;">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Symbol</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let coin of data">
+                            <tr>
+                                <td>{{coin.name | titlecase}}</td>
+                                <td>{{coin.price | currency}}</td>
+                                <td>{{coin.symbol | uppercase}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
