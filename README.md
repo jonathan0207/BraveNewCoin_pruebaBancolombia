@@ -5,6 +5,7 @@
 2. [Requisitos](#Requisitos)
 3. [Pasos para su ejecución](#Pasos-para-su-ejecución)
 4. [Probar el API](#Probar-el-API)
+5. [Probar el Frontend](#Probar-el-Frontend)
 
 ## Presentación
 Esta aplicación esta construida con la intención de exponer y poder crear un listado de criptomonedas preferidas
@@ -51,3 +52,16 @@ aplicación deberá estar ejecutandose en la url `http://localhost:3000`.
 Para probar el api puede usar la aplicación [Postman](https://www.postman.com/) 
 e importar el archivo `coins.postman_collection.json` que contiene la colección
 de peticiones a cada uno de los endpoints expuestos por la aplicación.
+
+## Probar-el-Frontend
+
+5. Abrir una terminal de 
+   comandos en el directorio principal del proyecto y ejecutar el siguiente comando
+   para instalar las dependencias del proyecto:
+   ```
+   npm install
+   ```
+6. Ahora puede poner en marcha la aplicación mediante el comando:
+    ```
+    ng serve
+    ```   
